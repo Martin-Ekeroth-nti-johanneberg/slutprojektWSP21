@@ -1,1 +1,29 @@
-h2 Welcome to start!
+center
+    br
+    h2 Welcome to QUIZZY!
+    p To start, please register or login!
+    div id="formbox"
+        div class="boxchild" id="registerbox"
+            form action="register/new" method="POST"
+                h3 Register a new user!
+                input type="text" name="reg_username" placeholder="Enter Username" required="" minlength="3" maxlength="12"
+                br
+                br
+                input type="password" name="reg_password" placeholder="Enter password" required="" minlength="3" maxlength="12"
+                br
+                br
+                input type="password" name="reg_password_confirm" placeholder="Enter password again" required="" minlength="3" maxlength="12"
+                br
+                br
+                input type="submit" value="New User"
+        div class="boxchild" id="loginbox"
+            h3 Login!
+            form action="login" method="POST"
+                input type="text" name="username" placeholder="Enter Username" required=""
+                br
+                br
+                input type="password" name="password" placeholder="Enter password" required=""
+                br
+                br
+                input type="submit" value="Log in"
+    p id="errormsg" #{errormsg}
