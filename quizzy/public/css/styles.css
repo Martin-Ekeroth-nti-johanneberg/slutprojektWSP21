@@ -1,62 +1,62 @@
-*{
-    margin: 0;
+* {
+  margin: 0;
 }
 
-nav {
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 800;
-    background: lightblue;
-    height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    top: 0;
-  }
-  
+header {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 800;
+  background: lightblue;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+}
+
 footer {
-    font-family: Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: 800;
-    background: lightblue;
-    height: 10vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 800;
+  background: lightblue;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 #formbox {
-    display: grid;
-    grid-template-columns:25% 25% 25% 25%;
-    margin: 5vh;
-    padding: 2.5vh;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  margin: 5vh;
+  padding: 2.5vh;
 }
 
 .boxchild {
-    background-color: lightskyblue;
-    padding: 5%;
-    border-style: none;
-    border-radius: 10px;
+  background-color: lightskyblue;
+  padding: 5%;
+  border-style: none;
+  border-radius: 10px;
 }
 
 #registerbox {
-    grid-column: 2 / 3;
-    margin-right: 5vh;
+  grid-column: 2 / 3;
+  margin-right: 5vh;
 }
 
 #loginbox {
-    grid-column: 3 / 4;
-    margin-left: 5vh;
+  grid-column: 3 / 4;
+  margin-left: 5vh;
 }
 
 #errormsg {
-    color:red;
-    font-weight: bolder;
+  color: red;
+  font-weight: bolder;
 }
