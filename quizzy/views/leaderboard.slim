@@ -3,5 +3,8 @@ nav class="profilenav"
     a href="/" Profile
     a href="/" Leaderboard
 br/
-center
-    h1 Welcome to Quizzy #{session[:username]}!
+table
+    tr
+        th Username
+        th Rank
+    / - for each user do

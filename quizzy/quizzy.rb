@@ -42,14 +42,25 @@ end
 post("/login") do
     username = params[:username]
     password = params[:password]
-    db.results_as_hash = true
-    result = db.execute("SELECT * FROM users WHERE username = ?", username).first
-    pwdigest = result["pwdigest"]
-    id = result["id"]
-    if BCrypt::Password.new(pwdigest) == password
-        session[:id] = id
-        session[:username] = username
-        redirect("/quizzy")
+    if db.execute("SELECT user_id FROM users WHERE username=?", username)[0]==nil
+        error=true
+    else
+        db.results_as_hash = true
+        result = db.execute("SELECT * FROM users WHERE username = ?", username).first
+        pwdigest = result["pwdigest"]
+        id = result["id"]
+        if BCrypt::Password.new(pwdigest) == password
+            session[:id] = id
+            session[:username] = username
+            redirect("/quizzy")
+        else
+            error=true
+        end
+    end
+    if error == true 
+        msg = "Wrong username/password"
+        msgtype="errormsg"
+        redirect("/")
     end
 end
 

@@ -8,7 +8,7 @@ header {
   text-decoration: none;
   font-size: 1.2em;
   font-weight: 800;
-  background: lightblue;
+  background: lightskyblue;
   height: 10vh;
   display: flex;
   justify-content: space-around;
@@ -22,7 +22,7 @@ footer {
   text-decoration: none;
   font-size: 1.2em;
   font-weight: 800;
-  background: lightblue;
+  background:lightskyblue;
   height: 10vh;
   display: flex;
   justify-content: space-around;
@@ -32,6 +32,26 @@ footer {
   width: 100%;
 }
 
+.boxchild {
+  background-color: lightblue;
+  padding: 5%;
+  border-style: none;
+  border-radius: 10px;
+}
+
+.profilenav {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: 800;
+  background: lightblue;
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+}
+
 #formbox {
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
@@ -39,12 +59,7 @@ footer {
   padding: 2.5vh;
 }
 
-.boxchild {
-  background-color: lightskyblue;
-  padding: 5%;
-  border-style: none;
-  border-radius: 10px;
-}
+
 
 #registerbox {
   grid-column: 2 / 3;
