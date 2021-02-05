@@ -67,3 +67,10 @@ end
 get("/quizzy") do
     slim(:"/quizzy")
 end
+
+get("/matches") do
+    username = session[:username]
+    db.results_as_hash = false
+    matches = db.execute("SELECT matches FROM users WHERE username=?", username)
+    slim(:"/matches", locals:{matches:matches})
+end
