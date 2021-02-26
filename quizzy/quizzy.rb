@@ -9,6 +9,11 @@ db = SQLite3::Database.new('db/quizzy.db')
 msg = ""
 msgtype = ""
 
+def get_user_id(username)
+    id = db.execute("SELECT user_id FROM users WHERE username = ?", username)[0][0]
+    return id
+end
+
 get('/') do
     slim(:"start", locals:{msg:msg, msgtype:msgtype})
 end
@@ -40,6 +45,7 @@ post("/register/new") do
 end
 
 post("/login") do
+    error = false
     username = params[:username]
     password = params[:password]
     if db.execute("SELECT user_id FROM users WHERE username=?", username)[0]==nil
@@ -65,12 +71,52 @@ post("/login") do
 end
 
 get("/quizzy") do
-    slim(:"/quizzy")
+    slim(:"/quizzy/quizzy")
 end
 
 get("/matches") do
     username = session[:username]
+    matches = []
     db.results_as_hash = false
-    matches = db.execute("SELECT matches FROM users WHERE username=?", username)
-    slim(:"/matches", locals:{matches:matches})
+    id = db.execute("SELECT user_id FROM users WHERE username = ?", username)[0][0]
+    match_ids = db.execute("SELECT * FROM users_matches_relations WHERE user_1_id = ? OR user_2_id = ?", id, id)
+    db.results_as_hash = true
+    match_ids.each do |current|
+        matchinfo = db.execute("SELECT * FROM matches WHERE match_id = ?", current[0])
+        matchinfo.push(current[1], current[2])
+        matches.push(matchinfo)
+        p "matches = #{matches}"
+    end
+    slim(:"/quizzy/matches", locals:{matches:matches, msg:msg, msgtype:msgtype})
+end
+
+
+get("/matches/new") do
+    db.results_as_hash = false
+    error = false
+    username = session[:username]
+    opponent_username = params[:opponent_username]
+    user_id = db.execute("SELECT user_id FROM users WHERE username = ?", username)[0][0]
+    opponent_id = db.execute("SELECT user_id FROM users WHERE username = ?", opponent_username)[0][0]
+    p "oop = #{db.execute("SELECT match_id FROM users_matches_relations WHERE user_1_id = ? AND user_2_id = ? OR user_1_id = ? AND user_2_id = ?", user_id, opponent_id, opponent_id, user_id)}"
+    if db.execute("SELECT user_id FROM users WHERE username=?", opponent_username)[0]==nil
+        msg = "That user doesn't exist! try again."
+        msgtype = "errormsg"
+        error = true
+    elsif username == opponent_username
+        msg = "You can't create a match against yourself!"
+        msgtype = "errormsg"
+        error = true
+    elsif db.execute("SELECT match_id FROM users_matches_relations WHERE user_1_id = ? AND user_2_id = ? OR user_1_id = ? AND user_2_id = ?", user_id, opponent_id, opponent_id, user_id)[0]!=nil
+        msg = "You already have a match with this user."
+        msgtype = "errormsg"
+        error = true
+    elsif error == false
+        db.execute("INSERT INTO users_matches_relations (user_1_id, user_2_id) VALUES(?, ?)",user_id, opponent_id)
+        match_id = db.execute("SELECT match_id FROM users_matches_relations WHERE user_1_id = ? AND user_2_id = ?", user_id, opponent_id)
+        db.execute("INSERT INTO matches (match_id, status, user_1_score, user_2_score) VALUES(?, 1, 0, 0)",match_id)
+        msgtype = ""
+        msg = "Match created!"
+    end
+    redirect("/matches")
 end
