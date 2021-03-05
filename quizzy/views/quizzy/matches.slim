@@ -1,26 +1,32 @@
 nav class="profilenav"
-    a href="/" Start
+    a href="/quizzy" Start
     a href="/matches" Matches
-    a href="/" Profile
-    a href="/" Leaderboard
+    a href="/quizzy" Profile
+    a href="/quizzy" Leaderboard
     a href="/" Logout
-br/
 
-h2 Start a new match!
-form action="matches/new" method="GET"
-    input type="text" name="opponent_username" placeholder="Enter the username of your opponent" required="" minlength="3" maxlength="12"
-    input type="submit" value="submit"
-p id="#{msgtype}" #{msg}
+content
+    h2 Start a new match!
+    form action="matches/new" method="GET"
+        input type="text" style="width: 250px;" name="opponent_username" placeholder="Enter the username of your opponent" required="" minlength="3" maxlength="12"
+        input type="submit" value="Submit!"
+    p id="#{msgtype}" #{msg}
 
-/p "You have #{matches} matches!"
-br/
-/p "Its your turn in #{your turn} of them"
-p Dina matcher är 
-
-- matches.each do |match|
-    p = match
-    p = match[0]["match_id"]
-/for each match do 
-    match blablbal 
-    button med match id som de står play på, redirect
-    
+    /p "You have #{matches} matches!"
+    br/
+    /p "Its your turn in #{your turn} of them"
+    h2 Current matches:
+    br/
+    - matches.each do |match|
+        form action="in_game/start" method="POST"
+            input type="hidden" value="#{match[0]["match_id"]}"
+            p = "#{match[1]} #{match[0]["user_1_score"]} - #{match[0]["user_2_score"]} #{match[2]} ;"
+            - if session[:username] == match[1]
+                - if match[0]["status"] == 1 || match[0]["status"] == 3
+                    input type="submit" value="Play!"
+            - elsif match[0]["status"] == 2 || match[0]["status"] == 4
+                input type="submit" value="Play!"
+            - else
+                input type="submit" value="Play!" disabled="" title="It's not your turn in this match."
+                
+        br/

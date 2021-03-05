@@ -10,8 +10,15 @@ msg = ""
 msgtype = ""
 
 def get_user_id(username)
+    db = SQLite3::Database.new('db/quizzy.db')
     id = db.execute("SELECT user_id FROM users WHERE username = ?", username)[0][0]
     return id
+end
+
+def get_user_username(id)
+    db = SQLite3::Database.new('db/quizzy.db')
+    username = db.execute("SELECT username FROM users WHERE user_id = ?", id)[0][0]
+    return username
 end
 
 get('/') do
@@ -46,6 +53,8 @@ end
 
 post("/login") do
     error = false
+    msg=""
+    msgtype=""
     username = params[:username]
     password = params[:password]
     if db.execute("SELECT user_id FROM users WHERE username=?", username)[0]==nil
@@ -83,15 +92,16 @@ get("/matches") do
     db.results_as_hash = true
     match_ids.each do |current|
         matchinfo = db.execute("SELECT * FROM matches WHERE match_id = ?", current[0])
-        matchinfo.push(current[1], current[2])
+        matchinfo.push(get_user_username(current[1]), get_user_username(current[2]))
         matches.push(matchinfo)
         p "matches = #{matches}"
     end
     slim(:"/quizzy/matches", locals:{matches:matches, msg:msg, msgtype:msgtype})
 end
 
-
 get("/matches/new") do
+    msg=""
+    msgtype=""
     db.results_as_hash = false
     error = false
     username = session[:username]
@@ -119,4 +129,10 @@ get("/matches/new") do
         msg = "Match created!"
     end
     redirect("/matches")
+end
+
+post("/in_game/start") do
+    categories=[0, 1, 2, 3, 4, 5]
+    categories.shuffle[0..2]
+    slim(:"/quizzy/in_game")
 end
