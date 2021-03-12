@@ -132,7 +132,8 @@ get("/matches/new") do
 end
 
 post("/in_game/start") do
-    categories=[0, 1, 2, 3, 4, 5]
-    categories.shuffle[0..2]
-    slim(:"/quizzy/in_game")
+    db.results_as_hash =  true
+    category_ids = db.execute("SELECT * FROM categories")
+    shuffled = category_ids.shuffle[0..2]
+    slim(:"/quizzy/in_game", locals:{categories:shuffled})
 end

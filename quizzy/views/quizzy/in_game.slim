@@ -2,9 +2,13 @@ center
     h1 Match against
     / Match against..
 
+        p Pick a category! 
+        form action="in_game" method="post"
+            - categories.each do |category|
+                input type="radio" name="categories"  #{category["category_name"]}
+            br/ 
+            br/
+            input type="submit" value="Choose"
+            
 
-    /Pick Category! 
-
-    /Anwser question!
-
-    /
+    - if status == "answer"
