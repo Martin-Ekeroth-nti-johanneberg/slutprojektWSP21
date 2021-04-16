@@ -19,7 +19,7 @@ content
     br/
     - matches.each do |match|
         form action="in_game/start" method="POST"
-            input type="hidden" value="#{match[0]["match_id"]}"
+            input type="hidden" name="match_id" value="#{match[0]["match_id"]}"
             p = "#{match[1]} #{match[0]["user_1_score"]} - #{match[0]["user_2_score"]} #{match[2]} ;"
             - if session[:username] == match[1]
                 - if match[0]["status"] == 1 || match[0]["status"] == 3

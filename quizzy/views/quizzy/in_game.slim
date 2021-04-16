@@ -1,14 +1,27 @@
-center 
-    h1 Match against
-    / Match against..
+nav class="profilenav"
+    a href="/quizzy" Start
+    a href="/matches" Matches
+    a href="/quizzy" Profile
+    a href="/quizzy" Leaderboard
+    a href="/" Logout
 
+center 
+    br/ 
+    h1 Match against
+    br/ 
+    / Match against..
+    - if status =="start"
         p Pick a category! 
-        form action="in_game" method="post"
+        br/ 
+        br/ 
+        form action="category_chosen" method="post"
+            input type="hidden" name="match_id" value="#{match_id}"
             - categories.each do |category|
-                input type="radio" name="categories"  #{category["category_name"]}
-            br/ 
+                label
+                    input type="radio" name="categories" value="#{category["category_id"]}" #{category["category_name"]}   
+                    br/ 
             br/
             input type="submit" value="Choose"
             
 
-    - if status == "answer"
+    - if status =="answer"

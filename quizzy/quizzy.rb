@@ -9,6 +9,9 @@ db = SQLite3::Database.new('db/quizzy.db')
 msg = ""
 msgtype = ""
 
+
+
+
 def get_user_id(username)
     db = SQLite3::Database.new('db/quizzy.db')
     id = db.execute("SELECT user_id FROM users WHERE username = ?", username)[0][0]
@@ -21,10 +24,14 @@ def get_user_username(id)
     return username
 end
 
+# Displays the starting page
+#
 get('/') do
     slim(:"start", locals:{msg:msg, msgtype:msgtype})
 end
 
+#Registers a new user and inserts its login to the database
+#
 post("/register/new") do
     errors = []
     username = params[:reg_username]
@@ -51,6 +58,8 @@ post("/register/new") do
     msgtype = ""
 end
 
+#Attempts to log the user in and updates the session
+#
 post("/login") do
     error = false
     msg=""
@@ -79,10 +88,14 @@ post("/login") do
     end
 end
 
+# Shows the main page
+#
 get("/quizzy") do
     slim(:"/quizzy/quizzy")
 end
 
+#Shows the matches page for the user
+#
 get("/matches") do
     username = session[:username]
     matches = []
@@ -108,7 +121,6 @@ get("/matches/new") do
     opponent_username = params[:opponent_username]
     user_id = db.execute("SELECT user_id FROM users WHERE username = ?", username)[0][0]
     opponent_id = db.execute("SELECT user_id FROM users WHERE username = ?", opponent_username)[0][0]
-    p "oop = #{db.execute("SELECT match_id FROM users_matches_relations WHERE user_1_id = ? AND user_2_id = ? OR user_1_id = ? AND user_2_id = ?", user_id, opponent_id, opponent_id, user_id)}"
     if db.execute("SELECT user_id FROM users WHERE username=?", opponent_username)[0]==nil
         msg = "That user doesn't exist! try again."
         msgtype = "errormsg"
@@ -131,9 +143,25 @@ get("/matches/new") do
     redirect("/matches")
 end
 
+
+#Shows the "pick category" phase of the match for the user
 post("/in_game/start") do
+    status="start"
+    match_id=params[:match_id]
     db.results_as_hash =  true
-    category_ids = db.execute("SELECT * FROM categories")
-    shuffled = category_ids.shuffle[0..2]
-    slim(:"/quizzy/in_game", locals:{categories:shuffled})
+    categories = db.execute("SELECT * FROM categories")
+    shuffled = categories.shuffle[0..2]
+    slim(:"/quizzy/in_game", locals:{categories:shuffled, status:status, match_id:match_id})
+end
+
+# Picks the questions and redirects the user so they are able to anwser them.
+#
+post("/in_game/category_chosen") do
+    category = params[:categories]
+    match_id=params[:match_id]
+    db.results_as_hash = false
+    questions = db.execute("SELECT question_id FROM questions WHERE belongs_to_category = #{category}").shuffle[0..2]
+    p "Hej #{questions[0][0]}"
+    db.execute("UPDATE matches SET category_id = #{category}, question_1_id= ?, question_2_id= ?, question_3_id= ? WHERE match_id = ?", questions[0][0], questions[1][0], questions[2][0], match_id)
+    redirect("/matches")
 end
