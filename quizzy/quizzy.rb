@@ -157,11 +157,24 @@ end
 # Picks the questions and redirects the user so they are able to anwser them.
 #
 post("/in_game/category_chosen") do
+    status = "answer"
     category = params[:categories]
     match_id=params[:match_id]
-    db.results_as_hash = false
-    questions = db.execute("SELECT question_id FROM questions WHERE belongs_to_category = #{category}").shuffle[0..2]
-    p "Hej #{questions[0][0]}"
-    db.execute("UPDATE matches SET category_id = #{category}, question_1_id= ?, question_2_id= ?, question_3_id= ? WHERE match_id = ?", questions[0][0], questions[1][0], questions[2][0], match_id)
+    db.results_as_hash = true
+    questions = db.execute("SELECT * FROM questions WHERE belongs_to_category = #{category}").shuffle[0..2]
+    db.execute("UPDATE matches SET category_id = #{category}, question_1_id= ?, question_2_id= ?, question_3_id= ? WHERE match_id = ?", questions[0]["question_id"], questions[1]["question_id"], questions[2]["question_id"], match_id)
+    slim(:"/quizzy/in_game", locals:{questions:questions, status:status, match_id:match_id})
+end
+
+post("/in_game/answered") do
+    questions = params[:questions]
+    questions = eval(questions) 
+    param_1 = questions[0]["question_id"].to_s.to_sym
+    answer_1 = params[param_1]
+    param_2 = questions[1]["question_id"].to_s.to_sym
+    answer_2 = params[param_2]
+    param_3 = questions[2]["question_id"].to_s.to_sym
+    answer_3 = params[param_3]
+    if answer_1 == db.execute()
     redirect("/matches")
 end

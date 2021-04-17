@@ -7,7 +7,7 @@ nav class="profilenav"
 
 center 
     br/ 
-    h1 Match against
+    h1 Play!
     br/ 
     / Match against..
     - if status =="start"
@@ -25,3 +25,19 @@ center
             
 
     - if status =="answer"
+        form action="answered" method="post"
+            - questions.each do |question|
+                p #{question["question_text"]} 
+                br/
+                input type="radio" name="#{question["question_id"]}" value="1" #{question["alternative_1"]}
+                br/
+                input type="radio" name="#{question["question_id"]}" value="2" #{question["alternative_2"]}
+                br/
+                input type="radio" name="#{question["question_id"]}" value="3" #{question["alternative_3"]}
+                br/
+                input type="radio" name="#{question["question_id"]}" value="4" #{question["alternative_4"]}
+                br/
+            input type="hidden" name="match_id" value="#{match_id}"
+            input type="hidden" name="questions" value="#{questions}"
+            input type="submit" value="Submit"
+        
