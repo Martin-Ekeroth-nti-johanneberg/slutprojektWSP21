@@ -146,12 +146,23 @@ end
 
 #Shows the "pick category" phase of the match for the user
 post("/in_game/start") do
-    status="start"
     match_id=params[:match_id]
+    session[:match_id] = match_id
     db.results_as_hash =  true
-    categories = db.execute("SELECT * FROM categories")
-    shuffled = categories.shuffle[0..2]
-    slim(:"/quizzy/in_game", locals:{categories:shuffled, status:status, match_id:match_id})
+    if [1,2].include? db.execute("SELECT status FROM matches WHERE match_id= ?", match_id)[0]["status"]
+        categories = db.execute("SELECT * FROM categories")
+        shuffled = categories.shuffle[0..2]
+        status="start"
+        slim(:"/quizzy/in_game", locals:{categories:shuffled, status:status, match_id:match_id})
+    else
+        status="answer"
+        question_ids=[]
+        3.times do |i| 
+            question_ids << db.execute("SELECT question_#{i+1}_id FROM matches WHERE match_id = ?", match_id)[0]["question_#{i+1}_id"]
+        end
+        questions = db.execute("SELECT * FROM questions WHERE question_id = ? OR question_id = ? OR question_id = ?", question_ids[0],question_ids[1],question_ids[2])        
+        slim(:"/quizzy/in_game", locals:{questions:questions, status:status, match_id:match_id})
+    end
 end
 
 # Picks the questions and redirects the user so they are able to anwser them.
@@ -159,7 +170,7 @@ end
 post("/in_game/category_chosen") do
     status = "answer"
     category = params[:categories]
-    match_id=params[:match_id]
+    match_id=session[:match_id]
     db.results_as_hash = true
     questions = db.execute("SELECT * FROM questions WHERE belongs_to_category = #{category}").shuffle[0..2]
     db.execute("UPDATE matches SET category_id = #{category}, question_1_id= ?, question_2_id= ?, question_3_id= ? WHERE match_id = ?", questions[0]["question_id"], questions[1]["question_id"], questions[2]["question_id"], match_id)
@@ -167,14 +178,28 @@ post("/in_game/category_chosen") do
 end
 
 post("/in_game/answered") do
+    user_id=get_user_id(session[:username])
+    match_id = session[:match_id]
     questions = params[:questions]
     questions = eval(questions) 
-    param_1 = questions[0]["question_id"].to_s.to_sym
-    answer_1 = params[param_1]
-    param_2 = questions[1]["question_id"].to_s.to_sym
-    answer_2 = params[param_2]
-    param_3 = questions[2]["question_id"].to_s.to_sym
-    answer_3 = params[param_3]
-    if answer_1 == db.execute()
+    answers = params[questions[0]["question_id"].to_s.to_sym].to_i, params[questions[1]["question_id"].to_s.to_sym].to_i, params[questions[2]["question_id"].to_s.to_sym].to_i
+    score = 0
+    answers.each_with_index do |answer, index|
+        score += answer == db.execute("SELECT right_alternative FROM questions WHERE question_id = ?", questions[index]["question_id"])[0]["right_alternative"]? 1:0
+    end
+    userscore = user_id == db.execute("SELECT user_1_id FROM users_matches_relations WHERE match_id = ?", match_id)[0]["user_1_id"]? "user_1_score":"user_2_score"
+    if userscore == "user_1_score"
+        status = db.execute("SELECT status FROM matches WHERE match_id= ?", match_id)[0]["status"] == 1? 4:1
+    else
+        status = db.execute("SELECT status FROM matches WHERE match_id= ?", match_id)[0]["status"] == 2? 3:2
+        db.execute("UPDATE matches SET turn = ? WHERE match_id = ?", db.execute("SELECT turn FROM matches WHERE match_id= ?", match_id)[0]["turn"]+1, match_id)
+    end
+    scoreupdate = db.execute("SELECT #{userscore} FROM matches WHERE match_id = ?", match_id)[0][userscore].to_i + score
+    db.execute("UPDATE matches SET #{userscore} = ?, status = ? WHERE match_id = ?",scoreupdate, status, match_id)
+    # if db.execute("SELECT turn FROM matches WHERE match_id= ?", match_id)[0]["turn"] == 5
+        # db.execute("UPDATE matches SET status = ? WHERE match_id = ?", 5, match_id)
+    #     if db.execute("SELECT user_1_score, user_2_score FROM matches WHERE match_id = ?", match_id)[0]["user_1_score"] != db.execute("SELECT user_1_score, user_2_score FROM matches WHERE match_id = ?", match_id)[0]["user_2_score"]
+    #         db.execute("UPDATE users SET ranking = ? WHERE user_id = ?", )
+    # end
     redirect("/matches")
 end

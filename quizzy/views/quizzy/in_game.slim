@@ -15,7 +15,6 @@ center
         br/ 
         br/ 
         form action="category_chosen" method="post"
-            input type="hidden" name="match_id" value="#{match_id}"
             - categories.each do |category|
                 label
                     input type="radio" name="categories" value="#{category["category_id"]}" #{category["category_name"]}   
@@ -37,7 +36,6 @@ center
                 br/
                 input type="radio" name="#{question["question_id"]}" value="4" #{question["alternative_4"]}
                 br/
-            input type="hidden" name="match_id" value="#{match_id}"
             input type="hidden" name="questions" value="#{questions}"
             input type="submit" value="Submit"
         

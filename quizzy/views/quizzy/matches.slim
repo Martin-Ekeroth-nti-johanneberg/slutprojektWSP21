@@ -18,15 +18,25 @@ content
     h2 Current matches:
     br/
     - matches.each do |match|
-        form action="in_game/start" method="POST"
-            input type="hidden" name="match_id" value="#{match[0]["match_id"]}"
-            p = "#{match[1]} #{match[0]["user_1_score"]} - #{match[0]["user_2_score"]} #{match[2]} ;"
-            - if session[:username] == match[1]
-                - if match[0]["status"] == 1 || match[0]["status"] == 3
+        - if match[0]["status"] != 5
+            form action="in_game/start" method="POST"
+                input type="hidden" name="match_id" value="#{match[0]["match_id"]}"
+                p = "#{match[1]}: #{match[0]["user_1_score"]} - #{match[0]["user_2_score"]} :#{match[2]} ;"
+                - if session[:username] == match[1]
+                    / Status 1 = User 1 picks category, Status 3 = user 1 answers question. 
+                    - if match[0]["status"] == 1 || match[0]["status"] == 3
+                        input type="submit" value="Play!"
+                    - else
+                        input type="submit" value="Play!" disabled="" title="It's not your turn in this match."
+                    / Status 2 = User 2 picks category, Status 4 = user 2 answers question. 
+                - elsif match[0]["status"] == 2 || match[0]["status"] == 4
                     input type="submit" value="Play!"
-            - elsif match[0]["status"] == 2 || match[0]["status"] == 4
-                input type="submit" value="Play!"
-            - else
-                input type="submit" value="Play!" disabled="" title="It's not your turn in this match."
-                
+                - else
+                    input type="submit" value="Play!" disabled="" title="It's not your turn in this match."
+    br/
+    br/
+    h2 Finished matches: 
+    - matches.each do |match|
+        - if match[0]["status"] == 5
+            p = "#{match[1]}: #{match[0]["user_1_score"]} - #{match[0]["user_2_score"]} :#{match[2]} "
         br/
