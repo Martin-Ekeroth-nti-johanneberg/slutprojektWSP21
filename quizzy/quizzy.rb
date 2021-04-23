@@ -10,27 +10,31 @@ msg = ""
 msgtype = ""
 
 
-
-
+#Lets the user input a username and finds the id of that user
+#
+#@params [string]; The username that the user wants the id from.
 def get_user_id(username)
     db = SQLite3::Database.new('db/quizzy.db')
     id = db.execute("SELECT user_id FROM users WHERE username = ?", username)[0][0]
     return id
 end
 
+#Lets the user input a user_id and finds the username of that user
+#
+#@params [integer]; The id that the user wants the username from.
 def get_user_username(id)
     db = SQLite3::Database.new('db/quizzy.db')
     username = db.execute("SELECT username FROM users WHERE user_id = ?", id)[0][0]
     return username
 end
 
-# Displays the starting page
+# Displays the starting page and, if supplied, a message from the terminal to the user
 #
 get('/') do
     slim(:"start", locals:{msg:msg, msgtype:msgtype})
 end
 
-#Registers a new user and inserts its login to the database
+#Registers a new user and inserts its login to the database, If the login is succesful the username is put in the session.
 #
 post("/register/new") do
     errors = []
@@ -88,13 +92,13 @@ post("/login") do
     end
 end
 
-# Shows the main page
+# Shows the main page with a new nav.
 #
 get("/quizzy") do
     slim(:"/quizzy/quizzy")
 end
 
-#Shows the matches page for the user
+#Shows the "Matches" page for the user
 #
 get("/matches") do
     username = session[:username]
@@ -112,6 +116,8 @@ get("/matches") do
     slim(:"/quizzy/matches", locals:{matches:matches, msg:msg, msgtype:msgtype})
 end
 
+#Attempts to create a new match against the opponent that the user wrote in their input
+#
 get("/matches/new") do
     msg=""
     msgtype=""
@@ -119,8 +125,9 @@ get("/matches/new") do
     error = false
     username = session[:username]
     opponent_username = params[:opponent_username]
-    user_id = db.execute("SELECT user_id FROM users WHERE username = ?", username)[0][0]
-    opponent_id = db.execute("SELECT user_id FROM users WHERE username = ?", opponent_username)[0][0]
+    user_id = get_user_id(username)
+    opponent_id = get_user_id(opponent_username)
+    session[:opponent_id] = opponent_id
     if db.execute("SELECT user_id FROM users WHERE username=?", opponent_username)[0]==nil
         msg = "That user doesn't exist! try again."
         msgtype = "errormsg"
@@ -129,14 +136,15 @@ get("/matches/new") do
         msg = "You can't create a match against yourself!"
         msgtype = "errormsg"
         error = true
-    elsif db.execute("SELECT match_id FROM users_matches_relations WHERE user_1_id = ? AND user_2_id = ? OR user_1_id = ? AND user_2_id = ?", user_id, opponent_id, opponent_id, user_id)[0]!=nil
+    elsif db.execute("SELECT match_id FROM users_matches_relations WHERE user_1_id = ? AND user_2_id = ? AND finished = 0 OR user_1_id = ? AND user_2_id = ? AND finished = 0", user_id, opponent_id, opponent_id, user_id)[0]!=nil
         msg = "You already have a match with this user."
         msgtype = "errormsg"
         error = true
     elsif error == false
-        db.execute("INSERT INTO users_matches_relations (user_1_id, user_2_id) VALUES(?, ?)",user_id, opponent_id)
-        match_id = db.execute("SELECT match_id FROM users_matches_relations WHERE user_1_id = ? AND user_2_id = ?", user_id, opponent_id)
-        db.execute("INSERT INTO matches (match_id, status, user_1_score, user_2_score) VALUES(?, 1, 0, 0)",match_id)
+        db.execute("INSERT INTO users_matches_relations (user_1_id, user_2_id, finished) VALUES(?, ?, 0)",user_id, opponent_id)
+        match_id = db.execute("SELECT match_id FROM users_matches_relations WHERE user_1_id = ? AND user_2_id = ? AND finished = 0", user_id, opponent_id)[0]
+        p match_id
+        db.execute("INSERT INTO matches (match_id, status, user_1_score, user_2_score, turn) VALUES (?, 1, 0, 0, 0)", match_id)
         msgtype = ""
         msg = "Match created!"
     end
@@ -145,6 +153,7 @@ end
 
 
 #Shows the "pick category" phase of the match for the user
+#
 post("/in_game/start") do
     match_id=params[:match_id]
     session[:match_id] = match_id
@@ -177,8 +186,10 @@ post("/in_game/category_chosen") do
     slim(:"/quizzy/in_game", locals:{questions:questions, status:status, match_id:match_id})
 end
 
+#Corrects the anwsers from the user and adds the amount of correct anwsers to their score, also keeps track of how many turns has been played and whose turn it is. When the match is finished, ranking is decreased for the loser of the match and increased for the winner.
+#
 post("/in_game/answered") do
-    user_id=get_user_id(session[:username])
+    user_id = get_user_id(session[:username])
     match_id = session[:match_id]
     questions = params[:questions]
     questions = eval(questions) 
@@ -192,14 +203,28 @@ post("/in_game/answered") do
         status = db.execute("SELECT status FROM matches WHERE match_id= ?", match_id)[0]["status"] == 1? 4:1
     else
         status = db.execute("SELECT status FROM matches WHERE match_id= ?", match_id)[0]["status"] == 2? 3:2
-        db.execute("UPDATE matches SET turn = ? WHERE match_id = ?", db.execute("SELECT turn FROM matches WHERE match_id= ?", match_id)[0]["turn"]+1, match_id)
     end
+    db.execute("UPDATE matches SET turn = ? WHERE match_id = ?", db.execute("SELECT turn FROM matches WHERE match_id= ?", match_id)[0]["turn"]+1, match_id)
     scoreupdate = db.execute("SELECT #{userscore} FROM matches WHERE match_id = ?", match_id)[0][userscore].to_i + score
     db.execute("UPDATE matches SET #{userscore} = ?, status = ? WHERE match_id = ?",scoreupdate, status, match_id)
-    # if db.execute("SELECT turn FROM matches WHERE match_id= ?", match_id)[0]["turn"] == 5
-        # db.execute("UPDATE matches SET status = ? WHERE match_id = ?", 5, match_id)
-    #     if db.execute("SELECT user_1_score, user_2_score FROM matches WHERE match_id = ?", match_id)[0]["user_1_score"] != db.execute("SELECT user_1_score, user_2_score FROM matches WHERE match_id = ?", match_id)[0]["user_2_score"]
-    #         db.execute("UPDATE users SET ranking = ? WHERE user_id = ?", )
-    # end
+    if db.execute("SELECT turn FROM matches WHERE match_id= ?", match_id)[0]["turn"] == 10
+         db.execute("UPDATE matches SET status = ? WHERE match_id = ?", 5, match_id)
+         db.execute("UPDATE users_matches_relations SET finished = 1 WHERE match_id = ?", match_id)
+         user1score= db.execute("SELECT user_1_score, user_2_score FROM matches WHERE match_id = ?", match_id)[0]["user_1_score"].to_i
+         user2score= db.execute("SELECT user_1_score, user_2_score FROM matches WHERE match_id = ?", match_id)[0]["user_2_score"].to_i
+         if user1score != user2score
+            winner = user1score < user2score ? user_id : session[:opponent_id]
+            loser = user1score > user2score ? user_id : session[:opponent_id]
+            db.execute("UPDATE users SET ranking = ? WHERE user_id = ?", db.execute("SELECT ranking FROM users WHERE user_id = ?", winner)[0]["ranking"]+10, winner)
+            db.execute("UPDATE users SET ranking = ? WHERE user_id = ?", db.execute("SELECT ranking FROM users WHERE user_id = ?", loser)[0]["ranking"]-10, loser)
+         end
+     end
     redirect("/matches")
+end
+
+get("/leaderboard") do
+    db.results_as_hash = true
+    users = db.execute("SELECT username, ranking FROM users").sort_by{|username, ranking| ranking}
+    p users
+    slim(:"/quizzy/leaderboard")
 end
