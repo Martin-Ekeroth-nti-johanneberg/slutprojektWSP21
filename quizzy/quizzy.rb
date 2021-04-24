@@ -31,6 +31,7 @@ end
 # Displays the starting page and, if supplied, a message from the terminal to the user
 #
 get('/') do
+    session[:username] = nil
     slim(:"start", locals:{msg:msg, msgtype:msgtype})
 end
 
@@ -53,7 +54,7 @@ post("/register/new") do
         errors.each { |str| msg += str + " " }
     else
         password_digest = BCrypt::Password.create(password)
-        db.execute("INSERT INTO users (username, pwdigest, role, ranking) VALUES (?, ?, ?, ?)",username,password_digest, "user", 1000)
+        db.execute("INSERT INTO users (username, pwdigest, ranking) VALUES (?, ?, ?)",username,password_digest, 1000)
         msg = "Registration succesful!"
         msgtype = ""
     end
@@ -126,13 +127,15 @@ get("/matches/new") do
     username = session[:username]
     opponent_username = params[:opponent_username]
     user_id = get_user_id(username)
-    opponent_id = get_user_id(opponent_username)
-    session[:opponent_id] = opponent_id
+    p if db.execute("SELECT user_id FROM users WHERE username=?", opponent_username)[0]
     if db.execute("SELECT user_id FROM users WHERE username=?", opponent_username)[0]==nil
         msg = "That user doesn't exist! try again."
         msgtype = "errormsg"
         error = true
-    elsif username == opponent_username
+        redirect("/matches")
+    end
+    opponent_id = get_user_id(opponent_username)
+    if username == opponent_username
         msg = "You can't create a match against yourself!"
         msgtype = "errormsg"
         error = true
@@ -158,6 +161,10 @@ post("/in_game/start") do
     match_id=params[:match_id]
     session[:match_id] = match_id
     db.results_as_hash =  true
+    p "hajkhrjkerjk"
+    opponent_id = get_user_id(session[:username]) == db.execute("SELECT user_1_id FROM users_matches_relations WHERE match_id = #{match_id}")[0]["user_1_id"]? db.execute("SELECT user_2_id FROM users_matches_relations WHERE match_id = #{match_id}")[0]["user_2_id"] : db.execute("SELECT user_1_id FROM users_matches_relations WHERE match_id = #{match_id}")[0]["user_1_id"]
+    p opponent_id
+    session[:opponent_id] = opponent_id
     if [1,2].include? db.execute("SELECT status FROM matches WHERE match_id= ?", match_id)[0]["status"]
         categories = db.execute("SELECT * FROM categories")
         shuffled = categories.shuffle[0..2]
@@ -207,24 +214,67 @@ post("/in_game/answered") do
     db.execute("UPDATE matches SET turn = ? WHERE match_id = ?", db.execute("SELECT turn FROM matches WHERE match_id= ?", match_id)[0]["turn"]+1, match_id)
     scoreupdate = db.execute("SELECT #{userscore} FROM matches WHERE match_id = ?", match_id)[0][userscore].to_i + score
     db.execute("UPDATE matches SET #{userscore} = ?, status = ? WHERE match_id = ?",scoreupdate, status, match_id)
-    if db.execute("SELECT turn FROM matches WHERE match_id= ?", match_id)[0]["turn"] == 10
+    if db.execute("SELECT turn FROM matches WHERE match_id= ?", match_id)[0]["turn"] == 2
          db.execute("UPDATE matches SET status = ? WHERE match_id = ?", 5, match_id)
          db.execute("UPDATE users_matches_relations SET finished = 1 WHERE match_id = ?", match_id)
          user1score= db.execute("SELECT user_1_score, user_2_score FROM matches WHERE match_id = ?", match_id)[0]["user_1_score"].to_i
          user2score= db.execute("SELECT user_1_score, user_2_score FROM matches WHERE match_id = ?", match_id)[0]["user_2_score"].to_i
          if user1score != user2score
-            winner = user1score < user2score ? user_id : session[:opponent_id]
-            loser = user1score > user2score ? user_id : session[:opponent_id]
-            db.execute("UPDATE users SET ranking = ? WHERE user_id = ?", db.execute("SELECT ranking FROM users WHERE user_id = ?", winner)[0]["ranking"]+10, winner)
-            db.execute("UPDATE users SET ranking = ? WHERE user_id = ?", db.execute("SELECT ranking FROM users WHERE user_id = ?", loser)[0]["ranking"]-10, loser)
+            p "Opponent id:" 
+            p session[:opponent_id]
+            if userscore == "user_1_score"
+                winner = user1score > user2score ? user_id : session[:opponent_id]
+                loser = user1score < user2score ? user_id : session[:opponent_id]
+            else
+                winner = user1score > user2score ? session[:opponent_id] : user_id
+                loser = user1score < user2score ? session[:opponent_id] : user_id
+            end
+            scorediff = (user1score-user2score).abs
+            db.execute("UPDATE users SET ranking = ? WHERE user_id = ?", db.execute("SELECT ranking FROM users WHERE user_id = ?", winner)[0]["ranking"]+scorediff, winner)
+            db.execute("UPDATE users SET ranking = ? WHERE user_id = ?", db.execute("SELECT ranking FROM users WHERE user_id = ?", loser)[0]["ranking"]-scorediff, loser)
          end
      end
     redirect("/matches")
 end
 
 get("/leaderboard") do
-    db.results_as_hash = true
-    users = db.execute("SELECT username, ranking FROM users").sort_by{|username, ranking| ranking}
+    db.results_as_hash = false
+    users = db.execute("SELECT username, ranking FROM users").sort_by{|i|i[1]}.reverse.first(10)
     p users
-    slim(:"/quizzy/leaderboard")
+    slim(:"/quizzy/leaderboard", locals:{users:users})
+end
+
+get("/profile") do
+    userid = get_user_id(session[:username])
+    db.results_as_hash = true
+    rank = db.execute("SELECT ranking FROM users WHERE user_id = #{userid}")[0]["ranking"]
+    matches_played = db.execute("SELECT * FROM users_matches_relations WHERE user_1_id = #{userid} OR user_2_id = #{userid}")
+    total = 0
+    matches_played.each do |match|
+        user = userid == match["user_1_id"] ? "user_1_score":"user_2_score"
+        total += db.execute("SELECT #{user} FROM matches WHERE match_id = #{match["match_id"]}")[0]["#{user}"]
+    end
+    slim(:"/quizzy/profile", locals:{rank:rank, matches_played:matches_played.count, correct:total})
+end
+
+get("/adminpanel") do
+    if session[:username] != "admin"
+        redirect("/")
+    end
+    db.results_as_hash = false
+    categories = db.execute("SELECT * FROM categories")
+    slim(:"/quizzy/adminpanel", locals:{categories:categories})
+end
+
+post("/new_question") do
+    category_id = params[:category].to_i
+    question = params[:questiontext]
+    p question
+    alternative_1 = params[:alternative_1]
+    alternative_2 = params[:alternative_2]
+    alternative_3 = params[:alternative_3]
+    alternative_4 = params[:alternative_4]
+    right_alternative = params[:right_alternative]
+    db.execute("INSERT INTO questions (belongs_to_category, alternative_1, alternative_2, alternative_3, alternative_4, right_alternative, question_text) VALUES (?, ?, ?, ?, ?, ?, ?)", category_id, alternative_1, alternative_2, alternative_3, alternative_4, right_alternative, question)
+    redirect("/adminpanel")
 end

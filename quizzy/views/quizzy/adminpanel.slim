@@ -1,0 +1,25 @@
+center
+    content 
+        br/
+        h1 SUPERSECRET ADMINPANEL
+        br/
+        h2 Add a new question 
+        br/
+        form action="new_question" method="post"
+            label for="category" What category?  
+            select name="category" required=""
+             - categories.each do |category|
+                option value="#{category[0]}" #{category[1]}
+            br/
+            label for="questiontext" What is the question?
+            br/
+            input type="text" name="questiontext" required=""
+            br/
+            - 4.times do |i|
+                label for="alternative_#{i+1}" Alternative #{i+1}
+                br/
+                input type="text" name="alternative_#{i+1}" required=""
+                input type="radio" name="right_alternative" value="#{i+1}" required=""
+                br/
+            br/
+            input type="submit" value="Submit!"

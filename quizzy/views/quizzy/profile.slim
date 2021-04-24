@@ -1,0 +1,16 @@
+nav class="profilenav"
+    a href="/quizzy" Start
+    a href="/matches" Matches
+    a href="/profile" Profile
+    a href="/leaderboard" Leaderboard
+    a href="/" Logout
+center
+    content 
+        h1 #{session[:username]}:s profile!
+        br/
+        p ranking: #{rank}
+        br/
+        p played matches: #{matches_played}
+        br/
+        p questions anwsered correctly: #{correct}
+        br/

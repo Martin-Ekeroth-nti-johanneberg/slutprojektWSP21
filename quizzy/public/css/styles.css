@@ -25,6 +25,11 @@ p {
   display: inline-block;
 }
 
+table, th, td {
+  border: 1px solid black;
+  padding: 5px;
+}
+
 footer {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
