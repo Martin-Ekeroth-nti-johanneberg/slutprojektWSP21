@@ -118,7 +118,7 @@ post("/login") do
         if BCrypt::Password.new(pwdigest) == password
             session[:id] = id
             session[:username] = username
-            redirect("/quizzy")
+            redirect("/quizzy/index")
         else
             error=true
             msg = "Wrong username/password"
@@ -134,8 +134,8 @@ end
 
 # Shows the main page with a new nav.
 #
-get("/quizzy") do
-    slim(:"/quizzy/quizzy")
+get("/quizzy/index") do
+    slim(:"/quizzy/index")
 end
 
 #Shows the "Matches" page for the user
@@ -325,9 +325,9 @@ end
 #Displays the leaderboard of the top 10 users
 #
 # @see Model#get_top_users
-get("/leaderboard") do
+get("/leaderboard/index") do
     users = get_top_users()
-    slim(:"/quizzy/leaderboard", locals:{users:users})
+    slim(:"/quizzy/leaderboard/index", locals:{users:users})
 end
 
 #Shows the profile page to the user.
@@ -351,12 +351,12 @@ end
 #Displays the adminpanel to the user, is only accessible to the admin
 #
 # @see Model#get_all_categories
-get("/adminpanel") do
+get("/adminpanel/index") do
     if session[:username] != "admin"
         redirect("/")
     end
     categories = get_all_categories()
-    slim(:"/quizzy/adminpanel", locals:{categories:categories})
+    slim(:"/quizzy/adminpanel/index", locals:{categories:categories})
 end
 
 #Creates a new question and inserts it to the questions database
@@ -390,5 +390,5 @@ end
 get("/adminpanel/delete_question") do
     questionid = params[:questionid]
     delete_question(questionid)
-    redirect("/adminpanel")
+    redirect("/adminpanel/index")
 end
