@@ -1,25 +1,20 @@
 nav class="profilenav"
     a href="/quizzy" Start
-    a href="/matches" Matches
-    a href="/profile" Profile
+    a href="index" Matches
+    a href="/profile/show" Profile
     a href="/leaderboard" Leaderboard
     a href="/" Logout
 
 content
-    h2 Start a new match!
-    form action="matches/new" method="GET"
-        input type="text" style="width: 250px;" name="opponent_username" placeholder="Enter the username of your opponent" required="" minlength="3" maxlength="12"
-        input type="submit" value="Submit!"
-    p id="#{msgtype}" #{msg}
-
-    /p "You have #{matches} matches!"
+    a href="/matches/new" Create a new match!
     br/
-    /p "Its your turn in #{your turn} of them"
+    a href="/matches/edit" Delete matches!
+    br/
     h2 Current matches:
     br/
     - matches.each do |match|
         - if match[0]["status"] != 5
-            form action="in_game/start" method="POST"
+            form action="show/start" method="POST"
                 input type="hidden" name="match_id" value="#{match[0]["match_id"]}"
                 p = "#{match[1]}: #{match[0]["user_1_score"]} - #{match[0]["user_2_score"]} :#{match[2]} ;"
                 - if session[:username] == match[1]

@@ -5,7 +5,7 @@ center
         br/
         h2 Add a new question 
         br/
-        form action="new_question" method="post"
+        form action="adminpanel/new_question" method="get"
             label for="category" What category?  
             select name="category" required=""
              - categories.each do |category|
@@ -23,3 +23,12 @@ center
                 br/
             br/
             input type="submit" value="Submit!"
+        br/
+        h2 Delete a question
+        br/
+        form action="adminpanel/delete_question" method="get"
+            label for="questionid" What is the id of the question you want to delete?
+            br/
+            input type="text" name="questionid" required=""
+            br/
+            input type="submit" value="Delete!"

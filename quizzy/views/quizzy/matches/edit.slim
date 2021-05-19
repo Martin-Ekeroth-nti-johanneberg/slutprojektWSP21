@@ -1,0 +1,15 @@
+nav class="profilenav"
+    a href="/quizzy" Start
+    a href="index" Matches
+    a href="/profile/show" Profile
+    a href="/leaderboard" Leaderboard
+    a href="/" Logout
+
+content
+    - matches.each do |match|
+        - if match[0]["status"] != 5
+            form action="delete" method="get"
+                input type="hidden" name="match_id" value="#{match[0]["match_id"]}"
+                p = "#{match[1]}: #{match[0]["user_1_score"]} - #{match[0]["user_2_score"]} :#{match[2]} ;"
+                input type="submit" value="Delete match!"
+    a href="index" Matches 

@@ -73,6 +73,11 @@
   
   
   
+  <dl>
+      <dt>Includes:</dt>
+      <dd>Model</dd>
+  </dl>
+  
   
 
   
@@ -113,7 +118,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Displays the starting page and, if supplied, a message from the terminal to the user.</p>
+<p>Display starting page and optional message to the user.</p>
 </div></span>
   
 </li>
@@ -122,7 +127,151 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="top-level-namespace.html#GET__matches-instance_method" title="#GET /matches (instance method)">#<strong>GET /matches</strong>  &#x21d2; Object </a>
+      <a href="top-level-namespace.html#GET__adminpanel-instance_method" title="#GET /adminpanel (instance method)">#<strong>GET /adminpanel</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Displays the adminpanel to the user, is only accessible to the admin.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#GET__adminpanel_delete_question-instance_method" title="#GET /adminpanel/delete_question (instance method)">#<strong>GET /adminpanel/delete_question</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deletes a question, removes it from the database.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#GET__adminpanel_new_question-instance_method" title="#GET /adminpanel/new_question (instance method)">#<strong>GET /adminpanel/new_question</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Creates a new question and inserts it to the questions database.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#GET__leaderboard-instance_method" title="#GET /leaderboard (instance method)">#<strong>GET /leaderboard</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Displays the leaderboard of the top 10 users.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#GET__matches_delete-instance_method" title="#GET /matches/delete (instance method)">#<strong>GET /matches/delete</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Deletes a match.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#GET__matches_edit-instance_method" title="#GET /matches/edit (instance method)">#<strong>GET /matches/edit</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Displays the “edit matches” page for the user.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#GET__matches_index-instance_method" title="#GET /matches/index (instance method)">#<strong>GET /matches/index</strong>  &#x21d2; Object </a>
     
 
     
@@ -161,7 +310,55 @@
 
   
     <span class="summary_desc"><div class='inline'>
+<p>Display the “Create a match” form for the user.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#GET__matches_new_new-instance_method" title="#GET /matches/new/new (instance method)">#<strong>GET /matches/new/new</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
 <p>Attempts to create a new match against the opponent that the user wrote in their input.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="top-level-namespace.html#GET__profile_show-instance_method" title="#GET /profile/show (instance method)">#<strong>GET /profile/show</strong>  &#x21d2; Object </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>Shows the profile page to the user.</p>
 </div></span>
   
 </li>
@@ -194,7 +391,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="top-level-namespace.html#get_user_id-instance_method" title="#get_user_id (instance method)">#<strong>get_user_id</strong>(username)  &#x21d2; Object </a>
+      <a href="top-level-namespace.html#POST__login-instance_method" title="#POST /login (instance method)">#<strong>POST /login</strong>  &#x21d2; Object </a>
     
 
     
@@ -209,7 +406,7 @@
 
   
     <span class="summary_desc"><div class='inline'>
-<p>Lets the user input a username and finds the id of that user.</p>
+<p>Attempts to log the user in and updates the <a href=":username">session</a> to match the username of the account.</p>
 </div></span>
   
 </li>
@@ -218,31 +415,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="top-level-namespace.html#get_user_username-instance_method" title="#get_user_username (instance method)">#<strong>get_user_username</strong>(id)  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Lets the user input a user_id and finds the username of that user.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="top-level-namespace.html#POST__in_game_answered-instance_method" title="#POST /in_game/answered (instance method)">#<strong>POST /in_game/answered</strong>  &#x21d2; Object </a>
+      <a href="top-level-namespace.html#POST__matches_show_answered-instance_method" title="#POST /matches/show/answered (instance method)">#<strong>POST /matches/show/answered</strong>  &#x21d2; Object </a>
     
 
     
@@ -266,7 +439,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="top-level-namespace.html#POST__in_game_category_chosen-instance_method" title="#POST /in_game/category_chosen (instance method)">#<strong>POST /in_game/category_chosen</strong>  &#x21d2; Object </a>
+      <a href="top-level-namespace.html#POST__matches_show_category_chosen-instance_method" title="#POST /matches/show/category_chosen (instance method)">#<strong>POST /matches/show/category_chosen</strong>  &#x21d2; Object </a>
     
 
     
@@ -290,7 +463,7 @@
         <li class="public ">
   <span class="summary_signature">
     
-      <a href="top-level-namespace.html#POST__in_game_start-instance_method" title="#POST /in_game/start (instance method)">#<strong>POST /in_game/start</strong>  &#x21d2; Object </a>
+      <a href="top-level-namespace.html#POST__matches_show_start-instance_method" title="#POST /matches/show/start (instance method)">#<strong>POST /matches/show/start</strong>  &#x21d2; Object </a>
     
 
     
@@ -306,30 +479,6 @@
   
     <span class="summary_desc"><div class='inline'>
 <p>Shows the “pick category” phase of the match for the user.</p>
-</div></span>
-  
-</li>
-
-      
-        <li class="public ">
-  <span class="summary_signature">
-    
-      <a href="top-level-namespace.html#POST__login-instance_method" title="#POST /login (instance method)">#<strong>POST /login</strong>  &#x21d2; Object </a>
-    
-
-    
-  </span>
-  
-  
-  
-  
-  
-  
-  
-
-  
-    <span class="summary_desc"><div class='inline'>
-<p>Attempts to log the user in and updates the session.</p>
 </div></span>
   
 </li>
@@ -363,6 +512,7 @@
   
 
 
+  
 
   <div id="instance_method_details" class="method_details_list">
     <h2>Instance Method Details</h2>
@@ -380,7 +530,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Displays the starting page and, if supplied, a message from the terminal to the user</p>
+<p>Display starting page and optional message to the user</p>
 
 
   </div>
@@ -396,15 +546,17 @@
       <pre class="lines">
 
 
-33
-34
-35</pre>
+26
+27
+28
+29</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 33</span>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 26</span>
 
 <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>/</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;start&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>msg:</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='label'>msgtype:</span><span class='id identifier rubyid_msgtype'>msgtype</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>
+    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;index&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>msg:</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='label'>msgtype:</span><span class='id identifier rubyid_msgtype'>msgtype</span><span class='rbrace'>}</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -412,9 +564,523 @@
 </div>
     
       <div class="method_details ">
-  <h3 class="signature " id="GET__matches-instance_method">
+  <h3 class="signature " id="GET__adminpanel-instance_method">
   
-    #<strong>GET /matches</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>GET /adminpanel</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Displays the adminpanel to the user, is only accessible to the admin</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#get_all_categories</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+333
+334
+335
+336
+337
+338
+339</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 333</span>
+
+<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/adminpanel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span> <span class='op'>!=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>admin</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_categories'>categories</span> <span class='op'>=</span> <span class='id identifier rubyid_get_all_categories'>get_all_categories</span><span class='lparen'>(</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/adminpanel&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>categories:</span><span class='id identifier rubyid_categories'>categories</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GET__adminpanel_delete_question-instance_method">
+  
+    #<strong>GET /adminpanel/delete_question</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Deletes a question, removes it from the database</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>questionid,</span>
+      
+      
+        <span class='type'>(<tt>integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The entered questionid</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#delete_question</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+369
+370
+371
+372
+373</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 369</span>
+
+<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/adminpanel/delete_question</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_questionid'>questionid</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:questionid</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_delete_question'>delete_question</span><span class='lparen'>(</span><span class='id identifier rubyid_questionid'>questionid</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/adminpanel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GET__adminpanel_new_question-instance_method">
+  
+    #<strong>GET /adminpanel/new_question</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Creates a new question and inserts it to the questions database</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>category,</span>
+      
+      
+        <span class='type'>(<tt>integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The chosen category id</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>questiontext,</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the entered question text</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>alternative_1,</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the entered alternative 1</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>alternative_2,</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the entered alternative 2</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>alternative_3,</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the entered alternative 3</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>alternative_4,</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the entered alternative 4</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>right_alternative,</span>
+      
+      
+        <span class='type'>(<tt>integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the correct_alternative</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#create_new_question</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+352
+353
+354
+355
+356
+357
+358
+359
+360
+361
+362</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 352</span>
+
+<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/adminpanel/new_question</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_category_id'>category_id</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:category</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='id identifier rubyid_question'>question</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:questiontext</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_alternative_1'>alternative_1</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:alternative_1</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_alternative_2'>alternative_2</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:alternative_2</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_alternative_3'>alternative_3</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:alternative_3</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_alternative_4'>alternative_4</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:alternative_4</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_right_alternative'>right_alternative</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:right_alternative</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_create_new_question'>create_new_question</span><span class='lparen'>(</span><span class='id identifier rubyid_category_id'>category_id</span><span class='comma'>,</span> <span class='id identifier rubyid_alternative_1'>alternative_1</span><span class='comma'>,</span> <span class='id identifier rubyid_alternative_2'>alternative_2</span><span class='comma'>,</span> <span class='id identifier rubyid_alternative_3'>alternative_3</span><span class='comma'>,</span> <span class='id identifier rubyid_alternative_4'>alternative_4</span><span class='comma'>,</span> <span class='id identifier rubyid_right_alternative'>right_alternative</span><span class='comma'>,</span> <span class='id identifier rubyid_question'>question</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/adminpanel</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GET__leaderboard-instance_method">
+  
+    #<strong>GET /leaderboard</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Displays the leaderboard of the top 10 users</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#get_top_users</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+307
+308
+309
+310</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 307</span>
+
+<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/leaderboard</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_users'>users</span> <span class='op'>=</span> <span class='id identifier rubyid_get_top_users'>get_top_users</span><span class='lparen'>(</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/leaderboard&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>users:</span><span class='id identifier rubyid_users'>users</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GET__matches_delete-instance_method">
+  
+    #<strong>GET /matches/delete</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Deletes a match</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>match_id,</span>
+      
+      
+        <span class='type'>(<tt>id</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The chosen match;s id</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#delete_match</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+204
+205
+206
+207
+208</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 204</span>
+
+<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/delete</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_match_id'>match_id</span><span class='op'>=</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:match_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_delete_match'>delete_match</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>matches/edit</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GET__matches_edit-instance_method">
+  
+    #<strong>GET /matches/edit</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Displays the “edit matches” page for the user</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#get_user_id</li>
+    
+      <li>Model#get_matches</li>
+    
+      <li>Model#get_match_info</li>
+    
+      <li>Model#get_user_username</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 186</span>
+
+<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/edit</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_username'>username</span> <span class='op'>=</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_matches'>matches</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_id'>get_user_id</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_match_ids'>match_ids</span> <span class='op'>=</span> <span class='id identifier rubyid_get_matches'>get_matches</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_match_ids'>match_ids</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_current'>current</span><span class='op'>|</span>
+        <span class='id identifier rubyid_matchinfo'>matchinfo</span> <span class='op'>=</span> <span class='id identifier rubyid_get_match_info'>get_match_info</span><span class='lparen'>(</span><span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_matchinfo'>matchinfo</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_get_user_username'>get_user_username</span><span class='lparen'>(</span><span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_get_user_username'>get_user_username</span><span class='lparen'>(</span><span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_matches'>matches</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_matchinfo'>matchinfo</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/matches/edit&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>matches:</span><span class='id identifier rubyid_matches'>matches</span><span class='comma'>,</span> <span class='label'>msg:</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='label'>msgtype:</span><span class='id identifier rubyid_msgtype'>msgtype</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GET__matches_index-instance_method">
+  
+    #<strong>GET /matches/index</strong>  &#x21d2; <tt>Object</tt> 
   
 
   
@@ -431,6 +1097,19 @@
 <div class="tags">
   
 
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#get_user_id</li>
+    
+      <li>Model#get_matches</li>
+    
+      <li>Model#get_match_info</li>
+    
+      <li>Model#Fet_user_username</li>
+    
+  </ul>
+
 
 
 </div><table class="source_code">
@@ -439,39 +1118,33 @@
       <pre class="lines">
 
 
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117</pre>
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 103</span>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 123</span>
 
-<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/index</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_username'>username</span> <span class='op'>=</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_matches'>matches</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_results_as_hash'>results_as_hash</span> <span class='op'>=</span> <span class='kw'>false</span>
-    <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT user_id FROM users WHERE username = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_match_ids'>match_ids</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT * FROM users_matches_relations WHERE user_1_id = ? OR user_2_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_results_as_hash'>results_as_hash</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_id'>get_user_id</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_match_ids'>match_ids</span> <span class='op'>=</span> <span class='id identifier rubyid_get_matches'>get_matches</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
     <span class='id identifier rubyid_match_ids'>match_ids</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_current'>current</span><span class='op'>|</span>
-        <span class='id identifier rubyid_matchinfo'>matchinfo</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT * FROM matches WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-        <span class='id identifier rubyid_matchinfo'>matchinfo</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_get_user_username'><span class='object_link'><a href="#get_user_username-instance_method" title="#get_user_username (method)">get_user_username</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_get_user_username'><span class='object_link'><a href="#get_user_username-instance_method" title="#get_user_username (method)">get_user_username</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_matchinfo'>matchinfo</span> <span class='op'>=</span> <span class='id identifier rubyid_get_match_info'>get_match_info</span><span class='lparen'>(</span><span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_matchinfo'>matchinfo</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_get_user_username'>get_user_username</span><span class='lparen'>(</span><span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='id identifier rubyid_get_user_username'>get_user_username</span><span class='lparen'>(</span><span class='id identifier rubyid_current'>current</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_matches'>matches</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='id identifier rubyid_matchinfo'>matchinfo</span><span class='rparen'>)</span>
-        <span class='id identifier rubyid_p'>p</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>matches = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_matches'>matches</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
-    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/matches&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>matches:</span><span class='id identifier rubyid_matches'>matches</span><span class='comma'>,</span> <span class='label'>msg:</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='label'>msgtype:</span><span class='id identifier rubyid_msgtype'>msgtype</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/matches/index&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>matches:</span><span class='id identifier rubyid_matches'>matches</span><span class='comma'>,</span> <span class='label'>msg:</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='label'>msgtype:</span><span class='id identifier rubyid_msgtype'>msgtype</span><span class='rbrace'>}</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -490,7 +1163,7 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Attempts to create a new match against the opponent that the user wrote in their input</p>
+<p>Display the “Create a match” form for the user</p>
 
 
   </div>
@@ -506,73 +1179,217 @@
       <pre class="lines">
 
 
-121
-122
-123
-124
-125
-126
-127
-128
-129
-130
-131
-132
-133
-134
-135
-136
 137
 138
-139
-140
-141
-142
-143
-144
-145
-146
-147
-148
+139</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 137</span>
+
+<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/matches/new&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>msg:</span><span class='id identifier rubyid_msg'>msg</span><span class='comma'>,</span> <span class='label'>msgtype:</span><span class='id identifier rubyid_msgtype'>msgtype</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GET__matches_new_new-instance_method">
+  
+    #<strong>GET /matches/new/new</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Attempts to create a new match against the opponent that the user wrote in their input</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>opponent_username,</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The entered opponent_username</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#get_user_id</li>
+    
+      <li>Model#user_exists</li>
+    
+      <li>Model#active_matches_exists</li>
+    
+      <li>Model#create_match</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
 149
 150
 151
-152</pre>
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 121</span>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 149</span>
 
-<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/new/new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_msg'>msg</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
     <span class='id identifier rubyid_msgtype'>msgtype</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
-    <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_results_as_hash'>results_as_hash</span> <span class='op'>=</span> <span class='kw'>false</span>
     <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='kw'>false</span>
     <span class='id identifier rubyid_username'>username</span> <span class='op'>=</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_opponent_username'>opponent_username</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:opponent_username</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_id'><span class='object_link'><a href="#get_user_id-instance_method" title="#get_user_id (method)">get_user_id</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_opponent_id'>opponent_id</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_id'><span class='object_link'><a href="#get_user_id-instance_method" title="#get_user_id (method)">get_user_id</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_opponent_username'>opponent_username</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:opponent_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_opponent_id'>opponent_id</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT user_id FROM users WHERE username=?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_opponent_username'>opponent_username</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='op'>==</span><span class='kw'>nil</span>
+    <span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_id'>get_user_id</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_user_exists'>user_exists</span><span class='lparen'>(</span><span class='id identifier rubyid_opponent_username'>opponent_username</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='kw'>false</span>
         <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>That user doesn&#39;t exist! try again.</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_msgtype'>msgtype</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>errormsg</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='kw'>true</span>
-    <span class='kw'>elsif</span> <span class='id identifier rubyid_username'>username</span> <span class='op'>==</span> <span class='id identifier rubyid_opponent_username'>opponent_username</span>
+        <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/index</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_opponent_id'>opponent_id</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_id'>get_user_id</span><span class='lparen'>(</span><span class='id identifier rubyid_opponent_username'>opponent_username</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_username'>username</span> <span class='op'>==</span> <span class='id identifier rubyid_opponent_username'>opponent_username</span>
         <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You can&#39;t create a match against yourself!</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_msgtype'>msgtype</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>errormsg</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='kw'>true</span>
-    <span class='kw'>elsif</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT match_id FROM users_matches_relations WHERE user_1_id = ? AND user_2_id = ? AND finished = 0 OR user_1_id = ? AND user_2_id = ? AND finished = 0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_opponent_id'>opponent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_opponent_id'>opponent_id</span><span class='comma'>,</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='op'>!=</span><span class='kw'>nil</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_active_matches_exists'>active_matches_exists</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_opponent_id'>opponent_id</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You already have a match with this user.</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_msgtype'>msgtype</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>errormsg</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='kw'>elsif</span> <span class='id identifier rubyid_session'>session</span>
     <span class='kw'>elsif</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>==</span> <span class='kw'>false</span>
-        <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INSERT INTO users_matches_relations (user_1_id, user_2_id, finished) VALUES(?, ?, 0)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_opponent_id'>opponent_id</span><span class='rparen'>)</span>
-        <span class='id identifier rubyid_match_id'>match_id</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT match_id FROM users_matches_relations WHERE user_1_id = ? AND user_2_id = ? AND finished = 0</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_opponent_id'>opponent_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
-        <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_match_id'>match_id</span>
-        <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INSERT INTO matches (match_id, status, user_1_score, user_2_score, turn) VALUES (?, 1, 0, 0, 0)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_create_match'>create_match</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_opponent_id'>opponent_id</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_msgtype'>msgtype</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Match created!</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
-    <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="GET__profile_show-instance_method">
+  
+    #<strong>GET /profile/show</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Shows the profile page to the user.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#get_user_id</li>
+    
+      <li>Model#get_user_info</li>
+    
+      <li>Model#get_user_matches</li>
+    
+      <li>Model#get_match_info</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+318
+319
+320
+321
+322
+323
+324
+325
+326
+327
+328</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 318</span>
+
+<span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/profile/show</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_userid'>userid</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_id'>get_user_id</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_rank'>rank</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_info'>get_user_info</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ranking</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_matches_played'>matches_played</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_matches'>get_user_matches</span><span class='lparen'>(</span><span class='id identifier rubyid_userid'>userid</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_total'>total</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_matches_played'>matches_played</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_match'>match</span><span class='op'>|</span>
+        <span class='id identifier rubyid_user'>user</span> <span class='op'>=</span> <span class='id identifier rubyid_userid'>userid</span> <span class='op'>==</span> <span class='id identifier rubyid_match'>match</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_1_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_1_score</span><span class='tstring_end'>&quot;</span></span><span class='op'>:</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_2_score</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_total'>total</span> <span class='op'>+=</span> <span class='id identifier rubyid_get_match_info'>get_match_info</span><span class='lparen'>(</span><span class='id identifier rubyid_match'>match</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>match_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_user'>user</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/profile/show&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>rank:</span><span class='id identifier rubyid_rank'>rank</span><span class='comma'>,</span> <span class='label'>matches_played:</span><span class='id identifier rubyid_matches_played'>matches_played</span><span class='period'>.</span><span class='id identifier rubyid_count'>count</span><span class='comma'>,</span> <span class='label'>correct:</span><span class='id identifier rubyid_total'>total</span><span class='rbrace'>}</span><span class='rparen'>)</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -607,342 +1424,15 @@
       <pre class="lines">
 
 
-97
-98
-99</pre>
+113
+114
+115</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 97</span>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 113</span>
 
 <span class='id identifier rubyid_get'>get</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/quizzy</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/quizzy&quot;</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="get_user_id-instance_method">
-  
-    #<strong>get_user_id</strong>(username)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Lets the user input a username and finds the id of that user</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-16
-17
-18
-19
-20</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 16</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_get_user_id'>get_user_id</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_db'>db</span> <span class='op'>=</span> <span class='const'>SQLite3</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>db/quizzy.db</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT user_id FROM users WHERE username = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_id'>id</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="get_user_username-instance_method">
-  
-    #<strong>get_user_username</strong>(id)  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Lets the user input a user_id and finds the username of that user</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-25
-26
-27
-28
-29</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 25</span>
-
-<span class='kw'>def</span> <span class='id identifier rubyid_get_user_username'>get_user_username</span><span class='lparen'>(</span><span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_db'>db</span> <span class='op'>=</span> <span class='const'>SQLite3</span><span class='op'>::</span><span class='const'>Database</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>db/quizzy.db</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_username'>username</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT username FROM users WHERE user_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_id'>id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span>
-    <span class='kw'>return</span> <span class='id identifier rubyid_username'>username</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="POST__in_game_answered-instance_method">
-  
-    #<strong>POST /in_game/answered</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Corrects the anwsers from the user and adds the amount of correct anwsers to their score, also keeps track of how many turns has been played and whose turn it is. When the match is finished, ranking is decreased for the loser of the match and increased for the winner.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-191
-192
-193
-194
-195
-196
-197
-198
-199
-200
-201
-202
-203
-204
-205
-206
-207
-208
-209
-210
-211
-212
-213
-214
-215
-216
-217
-218
-219
-220
-221
-222
-223</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 191</span>
-
-<span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/in_game/answered</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_id'><span class='object_link'><a href="#get_user_id-instance_method" title="#get_user_id (method)">get_user_id</a></span></span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_match_id'>match_id</span> <span class='op'>=</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:match_id</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_questions'>questions</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:questions</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_questions'>questions</span> <span class='op'>=</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_questions'>questions</span><span class='rparen'>)</span> 
-    <span class='id identifier rubyid_answers'>answers</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_questions'>questions</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_questions'>questions</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_questions'>questions</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-    <span class='id identifier rubyid_score'>score</span> <span class='op'>=</span> <span class='int'>0</span>
-    <span class='id identifier rubyid_answers'>answers</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_answer'>answer</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
-        <span class='id identifier rubyid_score'>score</span> <span class='op'>+=</span> <span class='id identifier rubyid_answer'>answer</span> <span class='op'>==</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT right_alternative FROM questions WHERE question_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_questions'>questions</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>right_alternative</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='op'>?</span> <span class='int'>1</span><span class='op'>:</span><span class='int'>0</span>
-    <span class='kw'>end</span>
-    <span class='id identifier rubyid_userscore'>userscore</span> <span class='op'>=</span> <span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>==</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT user_1_id FROM users_matches_relations WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_1_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='op'>?</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_1_score</span><span class='tstring_end'>&quot;</span></span><span class='op'>:</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_2_score</span><span class='tstring_end'>&quot;</span></span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_userscore'>userscore</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_1_score</span><span class='tstring_end'>&quot;</span></span>
-        <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT status FROM matches WHERE match_id= ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='int'>1</span><span class='op'>?</span> <span class='int'>4</span><span class='op'>:</span><span class='int'>1</span>
-    <span class='kw'>else</span>
-        <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT status FROM matches WHERE match_id= ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='int'>2</span><span class='op'>?</span> <span class='int'>3</span><span class='op'>:</span><span class='int'>2</span>
-    <span class='kw'>end</span>
-    <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UPDATE matches SET turn = ? WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT turn FROM matches WHERE match_id= ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>turn</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='op'>+</span><span class='int'>1</span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_scoreupdate'>scoreupdate</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_userscore'>userscore</span><span class='embexpr_end'>}</span><span class='tstring_content'> FROM matches WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_userscore'>userscore</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>+</span> <span class='id identifier rubyid_score'>score</span>
-    <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UPDATE matches SET </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_userscore'>userscore</span><span class='embexpr_end'>}</span><span class='tstring_content'> = ?, status = ? WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_scoreupdate'>scoreupdate</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT turn FROM matches WHERE match_id= ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>turn</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='int'>10</span>
-         <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UPDATE matches SET status = ? WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
-         <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UPDATE users_matches_relations SET finished = 1 WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
-         <span class='id identifier rubyid_user1score'>user1score</span><span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT user_1_score, user_2_score FROM matches WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_1_score</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-         <span class='id identifier rubyid_user2score'>user2score</span><span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT user_1_score, user_2_score FROM matches WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_2_score</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
-         <span class='kw'>if</span> <span class='id identifier rubyid_user1score'>user1score</span> <span class='op'>!=</span> <span class='id identifier rubyid_user2score'>user2score</span>
-            <span class='id identifier rubyid_winner'>winner</span> <span class='op'>=</span> <span class='id identifier rubyid_user1score'>user1score</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_user2score'>user2score</span> <span class='op'>?</span> <span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>:</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:opponent_id</span><span class='rbracket'>]</span>
-            <span class='id identifier rubyid_loser'>loser</span> <span class='op'>=</span> <span class='id identifier rubyid_user1score'>user1score</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_user2score'>user2score</span> <span class='op'>?</span> <span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>:</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:opponent_id</span><span class='rbracket'>]</span>
-            <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UPDATE users SET ranking = ? WHERE user_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT ranking FROM users WHERE user_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_winner'>winner</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ranking</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='op'>+</span><span class='int'>10</span><span class='comma'>,</span> <span class='id identifier rubyid_winner'>winner</span><span class='rparen'>)</span>
-            <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UPDATE users SET ranking = ? WHERE user_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT ranking FROM users WHERE user_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_loser'>loser</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>ranking</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='op'>-</span><span class='int'>10</span><span class='comma'>,</span> <span class='id identifier rubyid_loser'>loser</span><span class='rparen'>)</span>
-         <span class='kw'>end</span>
-     <span class='kw'>end</span>
-    <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="POST__in_game_category_chosen-instance_method">
-  
-    #<strong>POST /in_game/category_chosen</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Picks the questions and redirects the user so they are able to anwser them.</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-179
-180
-181
-182
-183
-184
-185
-186
-187</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 179</span>
-
-<span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/in_game/category_chosen</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>answer</span><span class='tstring_end'>&quot;</span></span>
-    <span class='id identifier rubyid_category'>category</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:categories</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_match_id'>match_id</span><span class='op'>=</span><span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:match_id</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_results_as_hash'>results_as_hash</span> <span class='op'>=</span> <span class='kw'>true</span>
-    <span class='id identifier rubyid_questions'>questions</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT * FROM questions WHERE belongs_to_category = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_category'>category</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_shuffle'>shuffle</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>2</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>UPDATE matches SET category_id = </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_category'>category</span><span class='embexpr_end'>}</span><span class='tstring_content'>, question_1_id= ?, question_2_id= ?, question_3_id= ? WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_questions'>questions</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_questions'>questions</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_questions'>questions</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
-    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/in_game&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>questions:</span><span class='id identifier rubyid_questions'>questions</span><span class='comma'>,</span> <span class='label'>status:</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='label'>match_id:</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-<span class='kw'>end</span></pre>
-    </td>
-  </tr>
-</table>
-</div>
-    
-      <div class="method_details ">
-  <h3 class="signature " id="POST__in_game_start-instance_method">
-  
-    #<strong>POST /in_game/start</strong>  &#x21d2; <tt>Object</tt> 
-  
-
-  
-
-  
-</h3><div class="docstring">
-  <div class="discussion">
-    
-<p>Shows the “pick category” phase of the match for the user</p>
-
-
-  </div>
-</div>
-<div class="tags">
-  
-
-
-
-</div><table class="source_code">
-  <tr>
-    <td>
-      <pre class="lines">
-
-
-157
-158
-159
-160
-161
-162
-163
-164
-165
-166
-167
-168
-169
-170
-171
-172
-173
-174
-175</pre>
-    </td>
-    <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 157</span>
-
-<span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/in_game/start</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
-    <span class='id identifier rubyid_match_id'>match_id</span><span class='op'>=</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:match_id</span><span class='rbracket'>]</span>
-    <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:match_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_match_id'>match_id</span>
-    <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_results_as_hash'>results_as_hash</span> <span class='op'>=</span>  <span class='kw'>true</span>
-    <span class='kw'>if</span> <span class='lbracket'>[</span><span class='int'>1</span><span class='comma'>,</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_include?'>include?</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT status FROM matches WHERE match_id= ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
-        <span class='id identifier rubyid_categories'>categories</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT * FROM categories</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
-        <span class='id identifier rubyid_shuffled'>shuffled</span> <span class='op'>=</span> <span class='id identifier rubyid_categories'>categories</span><span class='period'>.</span><span class='id identifier rubyid_shuffle'>shuffle</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>2</span><span class='rbracket'>]</span>
-        <span class='id identifier rubyid_status'>status</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>start</span><span class='tstring_end'>&quot;</span></span>
-        <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/in_game&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>categories:</span><span class='id identifier rubyid_shuffled'>shuffled</span><span class='comma'>,</span> <span class='label'>status:</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='label'>match_id:</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-    <span class='kw'>else</span>
-        <span class='id identifier rubyid_status'>status</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>answer</span><span class='tstring_end'>&quot;</span></span>
-        <span class='id identifier rubyid_question_ids'>question_ids</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
-        <span class='int'>3</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> 
-            <span class='id identifier rubyid_question_ids'>question_ids</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT question_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='op'>+</span><span class='int'>1</span><span class='embexpr_end'>}</span><span class='tstring_content'>_id FROM matches WHERE match_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_i'>i</span><span class='op'>+</span><span class='int'>1</span><span class='embexpr_end'>}</span><span class='tstring_content'>_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
-        <span class='kw'>end</span>
-        <span class='id identifier rubyid_questions'>questions</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT * FROM questions WHERE question_id = ? OR question_id = ? OR question_id = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_question_ids'>question_ids</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='id identifier rubyid_question_ids'>question_ids</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='comma'>,</span><span class='id identifier rubyid_question_ids'>question_ids</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='rparen'>)</span>        
-        <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/in_game&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>questions:</span><span class='id identifier rubyid_questions'>questions</span><span class='comma'>,</span> <span class='label'>status:</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='label'>match_id:</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rbrace'>}</span><span class='rparen'>)</span>
-    <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
   </tr>
@@ -961,13 +1451,58 @@
 </h3><div class="docstring">
   <div class="discussion">
     
-<p>Attempts to log the user in and updates the session</p>
+<p>Attempts to log the user in and updates the <a href=":username">session</a> to match the username of the account. Sets a timer for a failed login to prevent spam and hacker attacks.</p>
 
 
   </div>
 </div>
 <div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
   
+    <li>
+      
+        <span class='name'>username,</span>
+      
+      
+        <span class='type'>(<tt>string</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The entered username</p>
+</div>
+      
+    </li>
+  
+    <li>
+      
+        <span class='name'>password,</span>
+      
+      
+        <span class='type'>(<tt>password</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The entered password</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#user_exists</li>
+    
+      <li>Model#get_user_info</li>
+    
+  </ul>
 
 
 
@@ -977,11 +1512,6 @@
       <pre class="lines">
 
 
-67
-68
-69
-70
-71
 72
 73
 74
@@ -1003,36 +1533,391 @@
 90
 91
 92
-93</pre>
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 72</span>
 
 <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/login</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='kw'>false</span>
     <span class='id identifier rubyid_msg'>msg</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
-    <span class='id identifier rubyid_msgtype'>msgtype</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_msgtype'>msgtype</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>errormsg</span><span class='tstring_end'>&quot;</span></span>
     <span class='id identifier rubyid_username'>username</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_password'>password</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:password</span><span class='rbracket'>]</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT user_id FROM users WHERE username=?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='op'>==</span><span class='kw'>nil</span>
+    <span class='id identifier rubyid_prev_login'>prev_login</span> <span class='op'>=</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:prev_login</span><span class='rbracket'>]</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_user_exists'>user_exists</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='kw'>false</span>
         <span class='id identifier rubyid_error'>error</span><span class='op'>=</span><span class='kw'>true</span>
-    <span class='kw'>else</span>
-        <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_results_as_hash'>results_as_hash</span> <span class='op'>=</span> <span class='kw'>true</span>
-        <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT * FROM users WHERE username = ?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_first'>first</span>
+        <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>That username doesnt exist</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_prev_login'>prev_login</span> <span class='op'>!=</span> <span class='kw'>nil</span> <span class='op'>&amp;&amp;</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>==</span> <span class='kw'>false</span>
+        <span class='id identifier rubyid_p'>p</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>-</span> <span class='id identifier rubyid_prev_login'>prev_login</span>
+        <span class='id identifier rubyid_error'>error</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>-</span> <span class='id identifier rubyid_prev_login'>prev_login</span> <span class='op'>&lt;=</span> <span class='int'>10</span><span class='op'>?</span> <span class='kw'>true</span> <span class='op'>:</span> <span class='kw'>false</span>
+        <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>You are loging in too fast!</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>==</span> <span class='kw'>false</span>
+        <span class='id identifier rubyid_result'>result</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_info'>get_user_info</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_pwdigest'>pwdigest</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>pwdigest</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
         <span class='id identifier rubyid_id'>id</span> <span class='op'>=</span> <span class='id identifier rubyid_result'>result</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span>
         <span class='kw'>if</span> <span class='const'>BCrypt</span><span class='op'>::</span><span class='const'>Password</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_pwdigest'>pwdigest</span><span class='rparen'>)</span> <span class='op'>==</span> <span class='id identifier rubyid_password'>password</span>
             <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_id'>id</span>
             <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_username'>username</span>
+            <span class='id identifier rubyid_p'>p</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>username:</span><span class='tstring_end'>&quot;</span></span>
+            <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_username'>username</span>
             <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/quizzy</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
         <span class='kw'>else</span>
             <span class='id identifier rubyid_error'>error</span><span class='op'>=</span><span class='kw'>true</span>
+            <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Wrong username/password</span><span class='tstring_end'>&quot;</span></span>
         <span class='kw'>end</span>
     <span class='kw'>end</span>
+
     <span class='kw'>if</span> <span class='id identifier rubyid_error'>error</span> <span class='op'>==</span> <span class='kw'>true</span> 
-        <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Wrong username/password</span><span class='tstring_end'>&quot;</span></span>
-        <span class='id identifier rubyid_msgtype'>msgtype</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>errormsg</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_prev_login'>prev_login</span> <span class='op'>=</span> <span class='const'>Time</span><span class='period'>.</span><span class='id identifier rubyid_now'>now</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+        <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:prev_login</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_prev_login'>prev_login</span>
         <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="POST__matches_show_answered-instance_method">
+  
+    #<strong>POST /matches/show/answered</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Corrects the anwsers from the user and adds the amount of correct anwsers to their score, also keeps track of how many turns has been played and whose turn it is. When the match is finished, ranking is decreased for the loser of the match and increased for the winner.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>questions,</span>
+      
+      
+        <span class='type'>(<tt>array</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The anwsered questions</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#get_user_id&#39;</li>
+    
+      <li>Model#correct_answer</li>
+    
+      <li>Model#get_primary_user</li>
+    
+      <li>Model#get_match_info</li>
+    
+      <li>Model#update_match_turn</li>
+    
+      <li>Model#update_match_score_status</li>
+    
+      <li>Model#update_match_finished</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290
+291
+292
+293
+294
+295
+296
+297
+298
+299
+300
+301
+302</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 265</span>
+
+<span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/show/answered</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>=</span> <span class='id identifier rubyid_get_user_id'>get_user_id</span><span class='lparen'>(</span><span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_match_id'>match_id</span> <span class='op'>=</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:match_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_questions'>questions</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:questions</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_questions'>questions</span> <span class='op'>=</span> <span class='id identifier rubyid_eval'>eval</span><span class='lparen'>(</span><span class='id identifier rubyid_questions'>questions</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_answers'>answers</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_questions'>questions</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_questions'>questions</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span><span class='comma'>,</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='id identifier rubyid_questions'>questions</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>question_id</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='period'>.</span><span class='id identifier rubyid_to_sym'>to_sym</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+    <span class='id identifier rubyid_score'>score</span> <span class='op'>=</span> <span class='int'>0</span>
+    <span class='id identifier rubyid_answers'>answers</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_answer'>answer</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
+        <span class='id identifier rubyid_score'>score</span> <span class='op'>+=</span> <span class='id identifier rubyid_correct_answer'>correct_answer</span><span class='lparen'>(</span><span class='id identifier rubyid_answer'>answer</span><span class='comma'>,</span> <span class='id identifier rubyid_questions'>questions</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='rparen'>)</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_userscore'>userscore</span> <span class='op'>=</span> <span class='id identifier rubyid_get_primary_user'>get_primary_user</span><span class='lparen'>(</span><span class='id identifier rubyid_user_id'>user_id</span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_userscore'>userscore</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_1_score</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_get_match_info'>get_match_info</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='int'>1</span><span class='op'>?</span> <span class='int'>4</span><span class='op'>:</span><span class='int'>1</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='id identifier rubyid_get_match_info'>get_match_info</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>status</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>==</span> <span class='int'>2</span><span class='op'>?</span> <span class='int'>3</span><span class='op'>:</span><span class='int'>2</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_update_match_turn'>update_match_turn</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_scoreupdate'>scoreupdate</span> <span class='op'>=</span> <span class='id identifier rubyid_get_match_info'>get_match_info</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='id identifier rubyid_userscore'>userscore</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span> <span class='op'>+</span> <span class='id identifier rubyid_score'>score</span>
+    <span class='id identifier rubyid_update_match_score_status'>update_match_score_status</span><span class='lparen'>(</span><span class='id identifier rubyid_userscore'>userscore</span><span class='comma'>,</span> <span class='id identifier rubyid_scoreupdate'>scoreupdate</span><span class='comma'>,</span> <span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_get_match_info'>get_match_info</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>turn</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span> <span class='op'>&gt;=</span> <span class='int'>2</span>
+         <span class='id identifier rubyid_user1score'>user1score</span><span class='op'>=</span> <span class='id identifier rubyid_get_match_info'>get_match_info</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_1_score</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+         <span class='id identifier rubyid_user2score'>user2score</span><span class='op'>=</span> <span class='id identifier rubyid_get_match_info'>get_match_info</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_2_score</span><span class='tstring_end'>&quot;</span></span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_to_i'>to_i</span>
+         <span class='kw'>if</span> <span class='id identifier rubyid_user1score'>user1score</span> <span class='op'>!=</span> <span class='id identifier rubyid_user2score'>user2score</span>
+            <span class='id identifier rubyid_p'>p</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Opponent id:</span><span class='tstring_end'>&quot;</span></span> 
+            <span class='id identifier rubyid_p'>p</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:opponent_id</span><span class='rbracket'>]</span>
+            <span class='kw'>if</span> <span class='id identifier rubyid_userscore'>userscore</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user_1_score</span><span class='tstring_end'>&quot;</span></span>
+                <span class='id identifier rubyid_winner'>winner</span> <span class='op'>=</span> <span class='id identifier rubyid_user1score'>user1score</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_user2score'>user2score</span> <span class='op'>?</span> <span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>:</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:opponent_id</span><span class='rbracket'>]</span>
+                <span class='id identifier rubyid_loser'>loser</span> <span class='op'>=</span> <span class='id identifier rubyid_user1score'>user1score</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_user2score'>user2score</span> <span class='op'>?</span> <span class='id identifier rubyid_user_id'>user_id</span> <span class='op'>:</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:opponent_id</span><span class='rbracket'>]</span>
+            <span class='kw'>else</span>
+                <span class='id identifier rubyid_winner'>winner</span> <span class='op'>=</span> <span class='id identifier rubyid_user1score'>user1score</span> <span class='op'>&gt;</span> <span class='id identifier rubyid_user2score'>user2score</span> <span class='op'>?</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:opponent_id</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_user_id'>user_id</span>
+                <span class='id identifier rubyid_loser'>loser</span> <span class='op'>=</span> <span class='id identifier rubyid_user1score'>user1score</span> <span class='op'>&lt;</span> <span class='id identifier rubyid_user2score'>user2score</span> <span class='op'>?</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:opponent_id</span><span class='rbracket'>]</span> <span class='op'>:</span> <span class='id identifier rubyid_user_id'>user_id</span>
+            <span class='kw'>end</span>
+            <span class='id identifier rubyid_scorediff'>scorediff</span> <span class='op'>=</span> <span class='lparen'>(</span><span class='id identifier rubyid_user1score'>user1score</span><span class='op'>-</span><span class='id identifier rubyid_user2score'>user2score</span><span class='rparen'>)</span><span class='period'>.</span><span class='id identifier rubyid_abs'>abs</span>
+            <span class='id identifier rubyid_update_match_finished'>update_match_finished</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='comma'>,</span> <span class='id identifier rubyid_winner'>winner</span><span class='comma'>,</span> <span class='id identifier rubyid_scorediff'>scorediff</span><span class='comma'>,</span> <span class='id identifier rubyid_loser'>loser</span><span class='rparen'>)</span>
+         <span class='kw'>end</span>
+     <span class='kw'>end</span>
+    <span class='id identifier rubyid_redirect'>redirect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/index</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="POST__matches_show_category_chosen-instance_method">
+  
+    #<strong>POST /matches/show/category_chosen</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Picks the questions and redirects the user so they are able to anwser them.</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <p class="tag_title">Parameters:</p>
+<ul class="param">
+  
+    <li>
+      
+        <span class='name'>categories,</span>
+      
+      
+        <span class='type'>(<tt>integer</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>The chosen category id</p>
+</div>
+      
+    </li>
+  
+</ul>
+
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#pick_questions</li>
+    
+      <li>Model#set_category_and_questions</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+245
+246
+247
+248
+249
+250
+251
+252</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 245</span>
+
+<span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/show/category_chosen</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_status'>status</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>answer</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_category'>category</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:categories</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_match_id'>match_id</span><span class='op'>=</span><span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:match_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_questions'>questions</span> <span class='op'>=</span> <span class='id identifier rubyid_pick_questions'>pick_questions</span><span class='lparen'>(</span><span class='id identifier rubyid_category'>category</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_set_category_and_questions'>set_category_and_questions</span><span class='lparen'>(</span><span class='id identifier rubyid_category'>category</span><span class='comma'>,</span> <span class='id identifier rubyid_questions'>questions</span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/matches/show&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>questions:</span><span class='id identifier rubyid_questions'>questions</span><span class='comma'>,</span> <span class='label'>status:</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='label'>match_id:</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="POST__matches_show_start-instance_method">
+  
+    #<strong>POST /matches/show/start</strong>  &#x21d2; <tt>Object</tt> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Shows the “pick category” phase of the match for the user</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#get_opponent_id</li>
+    
+      <li>Model#status_1_or_2</li>
+    
+      <li>Model#get_all_categories</li>
+    
+      <li>Model#get_questions</li>
+    
+      <li>Model#get_question_info</li>
+    
+  </ul>
+
+
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 217</span>
+
+<span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/matches/show/start</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
+    <span class='id identifier rubyid_match_id'>match_id</span><span class='op'>=</span><span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:match_id</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:match_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_match_id'>match_id</span>
+    <span class='id identifier rubyid_username'>username</span><span class='op'>=</span> <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:username</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_opponent_id'>opponent_id</span> <span class='op'>=</span> <span class='id identifier rubyid_get_opponent_id'>get_opponent_id</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='comma'>,</span> <span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_session'>session</span><span class='lbracket'>[</span><span class='symbol'>:opponent_id</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_opponent_id'>opponent_id</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_status_1_or_2'>status_1_or_2</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_categories'>categories</span> <span class='op'>=</span> <span class='id identifier rubyid_get_all_categories'>get_all_categories</span><span class='lparen'>(</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_shuffled'>shuffled</span> <span class='op'>=</span> <span class='id identifier rubyid_categories'>categories</span><span class='period'>.</span><span class='id identifier rubyid_shuffle'>shuffle</span><span class='lbracket'>[</span><span class='int'>0</span><span class='op'>..</span><span class='int'>2</span><span class='rbracket'>]</span>
+        <span class='id identifier rubyid_status'>status</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>start</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/matches/show&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>categories:</span><span class='id identifier rubyid_shuffled'>shuffled</span><span class='comma'>,</span> <span class='label'>status:</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='label'>match_id:</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rbrace'>}</span><span class='rparen'>)</span>
+    <span class='kw'>else</span>
+        <span class='id identifier rubyid_status'>status</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>answer</span><span class='tstring_end'>&quot;</span></span>
+        <span class='id identifier rubyid_question_ids'>question_ids</span><span class='op'>=</span><span class='lbracket'>[</span><span class='rbracket'>]</span>
+        <span class='int'>3</span><span class='period'>.</span><span class='id identifier rubyid_times'>times</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span> 
+            <span class='id identifier rubyid_question_ids'>question_ids</span> <span class='op'>&lt;&lt;</span> <span class='id identifier rubyid_get_question'>get_question</span><span class='lparen'>(</span><span class='id identifier rubyid_match_id'>match_id</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>+</span><span class='int'>1</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+        <span class='id identifier rubyid_questions'>questions</span> <span class='op'>=</span> <span class='id identifier rubyid_get_question_info'>get_question_info</span><span class='lparen'>(</span><span class='id identifier rubyid_question_ids'>question_ids</span><span class='rparen'>)</span>       
+        <span class='id identifier rubyid_slim'>slim</span><span class='lparen'>(</span><span class='symbol'>:&quot;/quizzy/matches/show&quot;</span><span class='comma'>,</span> <span class='label'>locals:</span><span class='lbrace'>{</span><span class='label'>questions:</span><span class='id identifier rubyid_questions'>questions</span><span class='comma'>,</span> <span class='label'>status:</span><span class='id identifier rubyid_status'>status</span><span class='comma'>,</span> <span class='label'>match_id:</span><span class='id identifier rubyid_match_id'>match_id</span><span class='rbrace'>}</span><span class='rparen'>)</span>
     <span class='kw'>end</span>
 <span class='kw'>end</span></pre>
     </td>
@@ -1060,6 +1945,15 @@
 <div class="tags">
   
 
+  <p class="tag_title">See Also:</p>
+  <ul class="see">
+    
+      <li>Model#user_exists</li>
+    
+      <li>Model#create_user</li>
+    
+  </ul>
+
 
 
 </div><table class="source_code">
@@ -1068,6 +1962,10 @@
       <pre class="lines">
 
 
+35
+36
+37
+38
 39
 40
 41
@@ -1091,16 +1989,15 @@
 59
 60
 61
-62
-63</pre>
+62</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'quizzy.rb', line 39</span>
+      <pre class="code"><span class="info file"># File 'quizzy.rb', line 35</span>
 
 <span class='id identifier rubyid_post'>post</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>/register/new</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span> <span class='kw'>do</span>
     <span class='id identifier rubyid_errors'>errors</span> <span class='op'>=</span> <span class='lbracket'>[</span><span class='rbracket'>]</span>
     <span class='id identifier rubyid_username'>username</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:reg_username</span><span class='rbracket'>]</span>
-    <span class='kw'>if</span> <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>SELECT user_id FROM users WHERE username=?</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='op'>!=</span><span class='kw'>nil</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_user_exists'>user_exists</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_errors'>errors</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>There is a user with that name already!</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
     <span class='id identifier rubyid_password'>password</span> <span class='op'>=</span> <span class='id identifier rubyid_params'>params</span><span class='lbracket'>[</span><span class='symbol'>:reg_password</span><span class='rbracket'>]</span>
@@ -1108,13 +2005,16 @@
     <span class='kw'>if</span> <span class='lparen'>(</span><span class='id identifier rubyid_password'>password</span> <span class='op'>!=</span> <span class='id identifier rubyid_password_confirm'>password_confirm</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_errors'>errors</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>The passwords don&#39;t match!</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_username'>username</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>&lt;</span> <span class='int'>4</span>
+        <span class='id identifier rubyid_errors'>errors</span> <span class='op'>&lt;&lt;</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>That username is too short!</span><span class='tstring_end'>&quot;</span></span>
+    <span class='kw'>end</span>
     <span class='kw'>if</span> <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span> <span class='op'>!=</span> <span class='int'>0</span> 
         <span class='id identifier rubyid_msgtype'>msgtype</span><span class='op'>=</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>errormsg</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Registration unsuccesful! You got </span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_length'>length</span><span class='embexpr_end'>}</span><span class='tstring_content'> error(s)! </span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_errors'>errors</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='lbrace'>{</span> <span class='op'>|</span><span class='id identifier rubyid_str'>str</span><span class='op'>|</span> <span class='id identifier rubyid_msg'>msg</span> <span class='op'>+=</span> <span class='id identifier rubyid_str'>str</span> <span class='op'>+</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'> </span><span class='tstring_end'>&quot;</span></span> <span class='rbrace'>}</span>
     <span class='kw'>else</span>
         <span class='id identifier rubyid_password_digest'>password_digest</span> <span class='op'>=</span> <span class='const'>BCrypt</span><span class='op'>::</span><span class='const'>Password</span><span class='period'>.</span><span class='id identifier rubyid_create'>create</span><span class='lparen'>(</span><span class='id identifier rubyid_password'>password</span><span class='rparen'>)</span>
-        <span class='id identifier rubyid_db'>db</span><span class='period'>.</span><span class='id identifier rubyid_execute'>execute</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>INSERT INTO users (username, pwdigest, role, ranking) VALUES (?, ?, ?, ?)</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='id identifier rubyid_username'>username</span><span class='comma'>,</span><span class='id identifier rubyid_password_digest'>password_digest</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>user</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='int'>1000</span><span class='rparen'>)</span>
+        <span class='id identifier rubyid_create_user'>create_user</span><span class='lparen'>(</span><span class='id identifier rubyid_username'>username</span><span class='comma'>,</span> <span class='id identifier rubyid_password_digest'>password_digest</span><span class='rparen'>)</span>
         <span class='id identifier rubyid_msg'>msg</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Registration succesful!</span><span class='tstring_end'>&quot;</span></span>
         <span class='id identifier rubyid_msgtype'>msgtype</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_end'>&quot;</span></span>
     <span class='kw'>end</span>
@@ -1132,9 +2032,9 @@
 </div>
 
       <div id="footer">
-  Generated on Fri Apr 23 14:13:26 2021 by
+  Generated on Wed May 19 16:59:00 2021 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
-  0.9.26 (ruby-2.7.2).
+  0.9.26 (ruby-3.0.0).
 </div>
 
     </div>

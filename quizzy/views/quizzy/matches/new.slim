@@ -1,0 +1,16 @@
+nav class="profilenav"
+    a href="/quizzy" Start
+    a href="index" Matches
+    a href="/profile/show" Profile
+    a href="/leaderboard" Leaderboard
+    a href="/" Logout
+
+content
+    h2 Start a new match!
+    form action="new/new" method="GET"
+        input type="text" style="width: 250px;" name="opponent_username" placeholder="Enter the username of your opponent" required="" minlength="3" maxlength="12"
+        input type="submit" value="Submit!"
+    p id="#{msgtype}" #{msg}
+
+    br/
+    a href="index" Matches 
